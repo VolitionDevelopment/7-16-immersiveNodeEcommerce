@@ -12,6 +12,9 @@ ecommerceApp.controller('mainController', function($scope, $http, $location, $co
 			email: $scope.email
 		}).then(function successCallback(response){
 			console.log(response);
+			if(response.data.message == 'added'){
+				$location.path('/options');
+			}
 		},function errorCallback(response){
 			console.log(response);
 		});
