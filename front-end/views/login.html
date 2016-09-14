@@ -1,0 +1,36 @@
+<div class="container-fluid container-background">
+	<div class="row">
+		<div class="col-sm-12 form-box">
+			<div class="row">
+				<div class="col-sm-12 text-center form-header">
+					<h1>Login</h1>
+				</div>
+			</div>
+			<hr/>
+			<h4 class="warning text-center">{{errorMessage}}</h4>
+			<div class="col-sm-12 text-center">
+				<button class="btn btn-default center-block" ng-click="reactivateAccount()" id="yes-button">Yes</button>
+				<a href="/#/">
+	        		<button type="submit" class="btn btn-default center-block" id="no-button">No</button>
+	        	</a>
+	        </div>
+			<div class="row">
+				<div class="col-sm-12 form-wrapper">
+					<form role="form" ng-submit="loginForm(this)" id="login-form" name="login">
+						<div class="form-group">
+							<label>Username:</label>
+							<input type="text" ng-model="username" placeholder="Username" minlength="6" required="required" class="form-control"/>
+						</div>
+						<div class="form-group">
+							<label>Password:</label>
+							<input type="password" ng-model="password" placeholder="Password" minlength="6" required="required" class="form-control"/>
+						</div>
+						<div class="button-holder">
+							<button type="submit" class="btn btn-default center-block">Login</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

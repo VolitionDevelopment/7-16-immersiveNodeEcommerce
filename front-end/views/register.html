@@ -1,52 +1,37 @@
-<div class="container">
-
-	<div class="row">
-		<div class="col-sm-12">
-			<h1>Registration</h1>
-		</div>
-
-		<div class="col-sm-12">
-			<form ng-submit="register()" id="registration-form">
-				<div class="form-group">
-					<label class="col-sm-4">
-						Username
-					</label>
-					<div class="col-sm-4">
-						<input type="text" ng-model="username" placeholder="Enter your username" minlength="4" maxlength="50" class="form-control">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4">
-						Password
-					</label>
-					<div class="col-sm-4">
-						<input type="password" ng-model="password" placeholder="Enter your password" minlength="4" maxlength="50" class="form-control">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4">
-						Password Confirm
-					</label>
-					<div class="col-sm-4">
-						<input type="password" ng-model="password2" placeholder="Please confirm your passwrod" minlength="4" maxlength="50" class="form-control">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-4">
-						Email
-					</label>
-					<div class="col-sm-4">
-						<input type="email" ng-model="email" placeholder="Enter your email" minlength="4" maxlength="50" class="form-control">
-					</div>
-				</div>
-
-				<div class="button-holder">
-					<button type="submit" class="btn btn-success">Success</button>
-				</div>
-
-			</form>
-		</div>
-
-	</div>
-
+<div class="container-fluid container-background">
+    <div class="row">
+        <div class="col-sm-12 form-box">
+            <div class="row">
+                <div class="col-sm-12 text-center form-header">
+                    <h1>Register</h1>
+                </div>
+            </div>
+            <hr/>
+            <h4 class="warning text-center">{{errorMessage}}</h4>
+            <div class="row">
+                <div class="col-sm-12 form-wrapper">
+                    <form role="form" ng-submit="registerForm(this)" id="registration-form" name="registration">
+                        <div class="form-group">
+                            <label>Username:</label>
+                            <input type="text" ng-model="username" placeholder="Username" minlength="6" required="required" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Password:</label>
+                            <input type="password" ng-model="password" placeholder="Password" minlength="6" required="required" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" ng-model="password2" placeholder="Confirm Password" minlength="6" required="required" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Email:</label>
+                            <input type="email" ng-model="email" placeholder="example@example.com" required="required" class="form-control" />
+                        </div>
+                        <div class="button-holder">
+                            <button type="submit" class="btn btn-default center-block">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

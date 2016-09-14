@@ -1,0 +1,195 @@
+<div class="container-fluid options-body">
+	<div class="row">
+		<div class="col-sm-12 text-center" id="options-header">
+			<h1>Tell us what you want!</h1>
+			<h4>Shipping is free, and you can skip any week.</h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-5 col-sm-offset-1">
+			<form id="options-form-1" ng-submit="optionsForm(1)">
+				<div class="col-sm-12 text-center" id="individual-plan-form">
+					<h2>Individual Plan</h2>
+					<h5>For those who drink alone</h5>
+					<img src="css/images/solo-drinker.jpg" class="img-responsive">
+					<div class="row">
+						<!-- <h3>{{errorMessage}}</h3> -->
+						<div class="col-sm-6 text-right">
+							<h4>Cups per week:</h4>
+						</div>
+						<div class="col-sm-6 text-left">
+							<h4>14</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 text-right">
+							<h4>Price per cup:</h4>
+						</div>
+						<div class="col-sm-6 text-left">
+							<h4>$.50</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 text-right">
+							<h4>Weekly total:</h4>
+						</div>
+						<div class="col-sm-6 text-left">
+							<h4>$7.00</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 text-right">
+							<h4>Grind type:</h4>
+						</div>
+						<div class="col-sm-6 text-left">
+							<select class="btn btn-default dropdown" ng-model="grindTypeOne" ng-options="grind.option for grind in grinds">
+							</select>
+<!-- 							<div class="dropdown">
+	 								<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	 									Choose type
+	   								<span class="caret"></span>
+	 								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							  		<li></li>
+							  		<li><a href="#">Extra Coarse</a></li>
+							  		<li><a href="#">Coarse</a></li>
+								</ul>
+							</div> -->
+						</div>
+					</div>
+					<div class="row">
+						<button type="submit" class="btn btn-default center-block submit-plan-button">SUBMIT</button>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h5>Shipping is always free.</h5>
+							<h5>Skip any week. Cancel any time.</h5>
+						</div>
+					</div>
+				</div> 
+			</form>
+		</div>
+		<div class="col-sm-5">
+			<form id="options-form-2" ng-submit="optionsForm(2)">
+				<div class="col-sm-12 text-center" id="family-plan-form">
+					<h2>Family Plan</h2>
+					<h5>For those who drink together</h5>
+					<img src="css/images/coffee-drinkers.jpg" class="img-responsive">
+					<div class="row">
+						<div class="col-sm-6 text-right">
+							<h4>Cups per week:</h4>
+						</div>
+						<div class="col-sm-6 text-left">
+							<h4>40</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 text-right">
+							<h4>Price per cup:</h4>
+						</div>
+						<div class="col-sm-6 text-left">
+							<h4>$.45</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 text-right">
+							<h4>Weekly total:</h4>
+						</div>
+						<div class="col-sm-6 text-left">
+							<h4>$18.00</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 text-right">
+							<h4>Grind type:</h4>
+						</div>
+						<div class="col-sm-6 text-left">
+							<select class="btn btn-default dropdown" ng-model="grindTypeTwo" ng-options="grind.option for grind in grinds">
+							</select>
+<!-- 							<div class="dropdown">
+	 								<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	 									Choose type
+	   								<span class="caret"></span>
+	 								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							  		<li></li>
+							  		<li><a href="#">Extra Coarse</a></li>
+							  		<li><a href="#">Coarse</a></li>
+								</ul>
+							</div> -->
+						</div>
+					</div>
+					<div class="row">
+						<button type="submit" class="btn btn-default center-block submit-plan-button">SUBMIT</button>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h5>Shipping is always free.</h5>
+							<h5>Skip any week. Cancel any time.</h5>
+						</div>
+					</div>
+				</div> 
+			</form>	
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 text-center" id="customize-header">
+			<h2>Prefer to customize your order?</h2>
+			<h4>No problem. Just make your selections below.</h4>
+		</div>
+	</div>
+	<form id="options-form-3" ng-submit="optionsForm(3)">
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1 customize-divs">
+				<div class="col-sm-6">
+					<div class="col-sm-6 col-sm-offset-3">
+						<img src="css/images/calendar.png" class="img-responsive">
+					</div>
+				</div>
+				<div class="col-sm-6 customize-div-text">
+					<h4>1. FREQUENCY</h4>
+					<h6>How often would you like us to send you your coffee?</h6>
+					<select class="btn btn-default dropdown" ng-model="frequency" ng-options="frequencies for frequencies in frequencies">
+						<option selected="selected"></option>
+					</select>
+					<h6>You can cancel at any time. You can skip at any time.</h6>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1 customize-divs">
+				<div class="col-sm-6">
+					<div class="col-sm-6 col-sm-offset-3">
+						<img src="css/images/food-scale.png" class="img-responsive">
+					</div>
+				</div>
+				<div class="col-sm-6 customize-div-text">
+					<h4>2. QUANTITY</h4>
+					<h6>How many pounds (in increments of .25 lb) would you like each delivery?</h6>
+					<h6>$20.00/lb</h6>
+					<input ng-model="quantity" id="quantity-input">
+					<h6>You can cancel at any time. You can skip at any time.</h6>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1 customize-divs">
+				<div class="col-sm-6">
+					<div class="col-sm-6 col-sm-offset-3">
+						<img src="css/images/beans.png" class="img-responsive">
+					</div>
+				</div>
+				<div class="col-sm-6 customize-div-text">
+					<h4>3. GRIND TYPE</h4>
+					<h6>What grind type would you like?</h6>
+					<select class="btn btn-default dropdown" ng-model="grindTypeThree" ng-options="grind.option for grind in grinds">
+					</select>
+					<h6>You can cancel at any time. You can skip at any time.</h6>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<button type="submit" class="btn btn-default center-block submit-plan-button">SUBMIT</button>
+		</div>
+	</form>
+</div>
